@@ -9,15 +9,26 @@
 // 5. Create a way to listen for a click that will play the song in the audio play
 
 // fetches
-// https://itunes.apple.com/search?term=die+antwoord&entity=music
-// https://itunes.apple.com/search?term=${search value}&entity=music
-let search = document.getElementById('searchbutton');
-let album = document.getElementById('#');
-let results = `
-<h2> Search Results </2>
-<div>
-<img src="" alt "Album cover">
-<p id="song-title"> </p>
-<p id="band-name"> </p>
-</div>
-`
+
+// let search = document.getElementById('searchbutton');
+// let album = document.getElementById('#');
+// let results = `
+// <h2> Search Results </2>
+// <div>
+// <img src="" alt "Album cover">
+// <p id="song-title"> </p>
+// <p id="band-name"> </p>
+// </div>
+// `
+fetch ("https://itunes.apple.com/search?term=die+antwoord")
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log(response.status);
+        return;
+      }
+      response.json().then(function(data) {
+        console.log("die Antwoord", data);
+      });
+    }
+  )

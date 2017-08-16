@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>iTunes Music Search</title>
+  <title>	&#9835;  itunes Music Search  	&#9835;</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <header>
-      <h1>Really Awesome Music Site</h1>
+      <h1>Music</h1>
     </header>
     <section class="player">
-      <audio class="music-player" controls="controls" src=""></audio>
-      <p> Now playing: </p>
+      <!-- <audio  controls autoplay src="${data.results[i].previewUrl}" class="music-player">
+      <p> Now playing: ${data.reults[i].trackName}
+      </audio> -->
     </section>
-    <hr> </hr>
 
-  <br> </br>
+    <br> </br>
     <section class="search">
       <form class="search-form">
-        <input type="text"> </input>
-        <button id="searchbutton">Search</button>
+        <input type="text" placeholder="Song title or Artist" id="searchfield" > </input>
+        <button type="button" id="search-button">Search</button>
 
       </form>
     </section>
-      <br> </br>
-    <hr> </hr>
-    <section class="results"></section>
+
+    <section >
+      <div class="test">
+        <h3> Search Results</h3>
+      <hr></hr>
+    </div>
+  <div class="results">
+   </div>
+
+    </section>
+
+
   </div>
   <script src="main.js"></script>
 </body>

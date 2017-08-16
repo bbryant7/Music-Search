@@ -1,3 +1,109 @@
+
 body {
-  background-color: #60d9f1;
+  background-color: #F4EBE8;
+  font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    margin-top: 0;
+
+}
+header {
+  background-image: url("mark-solarski-183866.jpg");
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+
+
+}
+.search {
+  margin-left: 50px;
+}
+h3 {
+  margin-bottom: 0;
+}
+
+hr {
+  margin-top: 0px;
+  color: white;
+}
+.test {
+  margin-left: 50px;
+  margin-right: 50px
+
+}
+
+.results {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+flex-basis: 100%;
+text-align: center;
+/*border-radius: 5px;*/
+
+
+}
+
+.search-results {
+flex-basis: 100%;
+padding: 16px 10px 16px 10px;
+background: linear-gradient(to bottom right, #714B39, #F2E8E1);
+border-radius: 5px;
+/*background: linear-gradient(to bottom right, #0097B2, #F2E8E1);*/
+
+  margin: 10px;
+
+
+}
+
+.artists {
+width: 150px;
+border-radius: 5px;
+
+}
+
+#song-title {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+#band-name {
+ margin: 0;
+ text-align: center;
+ font-size: 12px
+}
+
+h1 {
+  /*padding-top: 20px;*/
+  padding: 20px;
+  color: white;
+  margin-top: 0;
+  margin-left: 80%;
+
+}
+
+#searchfield {
+width: 300px;
+height: 20px;
+}
+
+#search-button {
+  border-radius: 5px;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-device-width : 704px) {
+  .search-results {
+    flex-basis: 30%;
+
+  }
+}
+
+@media screen and (min-device-width : 1024px) {
+
+  .search-results {
+    flex-basis: 20%;
+
+  }
 }

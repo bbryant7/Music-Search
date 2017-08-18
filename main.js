@@ -1,17 +1,3 @@
-/*
-  Here is a rough idea for the steps you could take:
-*/
-
-// 1. First select and store the elements you'll be working with
-// 2. Create your `submit` event for getting the user's search term
-// 3. Create your `fetch` request that is called after a submission
-// 4. Create a way to append the fetch results to your page
-// 5. Create a way to listen for a click that will play the song in the audio play
-
-
-// click on picture icon of song (click event)
-// pull audio file and push to "src" attribute
-
 let searchButton = document.querySelector('#search-button');
 let results = document.querySelector('.results');
 let songs = '';
@@ -20,10 +6,6 @@ let url = 'https://itunes.apple.com/search?media=music&term=';
 let artist = document.querySelector('.search-results');
 let player = document.querySelector('.player');
 
-// console.log("url", url);
-// console.log("search field", word);
-// console.log("test", word.value);
-// console.log("button", searchButton);
 
 searchButton.addEventListener('click', function() {
   songs = '';
@@ -49,13 +31,8 @@ searchButton.addEventListener('click', function() {
               </div>
               `;
             results.innerHTML = songs
-
-
-
-// console.log("songs",songs);
-
-
           };
+
           results.addEventListener('click', function(e) {
             let audio = `
             <audio  controls autoplay src="${e.target.title}" class="music-player">
@@ -63,15 +40,13 @@ searchButton.addEventListener('click', function() {
             </audio>
                           `
             player.innerHTML = audio;
-            console.log("artist click event works")
 
-                        });
+            console.log("artist click event works")
+            console.log(e);
+
+          });
         })
 
       })
 
 });
-
-// results.addEventListener('click', function(e) {
-//     console.log(data.results[i].previewUrl)
-//               });
